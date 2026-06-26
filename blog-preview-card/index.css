@@ -1,0 +1,133 @@
+:root {
+  --yellow-color: hsl(47, 88%, 63%);
+  --black-color: hsl(0, 0%, 7%);
+  --grey-color: hsl(0, 0%, 42%);
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Removed !important to resolve the style linter warnings */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: var(--yellow-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Figtree", sans-serif;
+}
+
+.card {
+  background-color: white;
+  width: 20.4375rem;
+  border-radius: 1.25rem;
+  border: 0.0625rem solid var(--black-color);
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1rem, 5vw, 1.5rem);
+  box-shadow: 0.5rem 0.5rem 0 var(--black-color);
+}
+
+.card .illustration {
+  border-radius: 0.625rem;
+  margin-block-end: clamp(1rem, 4vw, 1.5rem);
+}
+
+.card .content .tag {
+  color: var(--black-color);
+  background-color: var(--yellow-color);
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  margin: 0;
+  font-weight: 800;
+  font-size: 0.75rem;
+  line-height: 150%;
+}
+
+.card .content .date {
+  color: var(--black-color);
+  margin-block: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 150%;
+  font-weight: 500;
+}
+
+.card .content .title {
+  color: var(--black-color);
+  margin-block: 0.75rem;
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  line-height: 150%;
+  font-weight: 800;
+  transition: color 0.15s ease;
+}
+
+.card:hover .title {
+  color: var(--yellow-color);
+  cursor: pointer;
+}
+
+.card .content .desc {
+  color: var(--grey-color);
+  margin-block-start: 0.75rem;
+  margin-block-end: clamp(1rem, 4vw, 1.5rem);
+  font-size: 0.875rem;
+  line-height: 150%;
+  font-weight: 500;
+}
+
+.card .author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card .author .avatar {
+  max-width: 2rem;
+  max-height: 2rem;
+}
+
+.card .author .name {
+  color: var(--black-color);
+  margin: 0;
+  font-weight: 800;
+  font-size: 0.875rem;
+  line-height: 150%;
+}
+
+@media (min-width: 30em) {
+  .card {
+    width: 100%;
+    max-width: 24rem;
+  }
+
+  .card .content .tag {
+    font-size: 0.875rem;
+  }
+
+  .card .content .desc {
+    font-size: 1rem;
+    max-width: 21rem;
+  }
+}
