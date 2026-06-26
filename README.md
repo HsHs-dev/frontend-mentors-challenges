@@ -1,3 +1,7 @@
 # Frontend Mentors Challenges Gallery
 
-[Gallery]()
+<p align="center">
+  <a href="https://hshs-dev.github.io/frontend-mentors-challenges/">
+    <img src="gallery-button.svg" alt="Gallery">
+  </a>
+</p>
