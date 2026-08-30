@@ -1,18 +1,47 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
     <title>Frontend Mentor Challenges</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Frontend Mentor Challenges</h1>
 
-    <ul style="gap: 5px">
-      <li>
-        <a href="./qr-code-component/">QR Code Component</a>
-      </li>
-      <li>
-        <a href="./blog-preview-card/">Blog Preview Card</a>
-      </li>
-    </ul>
+    <main class="gallery-grid">
+      <!-- Challenge Card 1 -->
+      <a href="./qr-code-component/" class="card">
+        <div class="card-media">
+          <img
+            src="./qr-code-component/preview.jpg"
+            alt="QR Code Preview"
+            class="card-img"
+          />
+        </div>
+        <div class="card-body">
+          <div class="card-header">
+            <h2>QR Code Component</h2>
+          </div>
+          <p>A responsive QR code card component.</p>
+        </div>
+      </a>
+
+      <!-- Challenge Card 2 -->
+      <a href="./blog-preview-card/" class="card">
+        <div class="card-media">
+          <img
+            src="./blog-preview-card/preview.jpg"
+            alt="Blog Preview Card Preview"
+            class="card-img"
+          />
+        </div>
+        <div class="card-body">
+          <div class="card-header">
+            <h2>Blog Preview Card</h2>
+          </div>
+          <p>A clean blog post preview card layout.</p>
+        </div>
+      </a>
+    </main>
   </body>
 </html>
